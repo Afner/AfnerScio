@@ -1,0 +1,9 @@
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\bin\Debug\ADO Database.exe.config
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\bin\Debug\ADO Database.exe
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\bin\Debug\ADO Database.pdb
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\obj\Debug\ADO Database.csprojResolveAssemblyReference.cache
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\obj\Debug\ADO_Database.Form1.resources
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\obj\Debug\ADO_Database.Properties.Resources.resources
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\obj\Debug\ADO Database.csproj.GenerateResource.Cache
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\obj\Debug\ADO Database.exe
+c:\users\aperales\documents\visual studio 2013\Projects\ADO Database\ADO Database\obj\Debug\ADO Database.pdb
