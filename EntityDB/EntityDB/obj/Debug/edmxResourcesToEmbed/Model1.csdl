@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tasksModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tarea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tiempo" Type="Int32" />
+    <Property Name="iduser" Type="Int32" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__tareas__iduser__145C0A3F" FromRole="tareas" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="puesto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tareas" Relationship="Self.FK__tareas__iduser__145C0A3F" FromRole="Usuarios" ToRole="tareas" />
+  </EntityType>
+  <Association Name="FK__tareas__iduser__145C0A3F">
+    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="tareas" Type="Self.tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tareas">
+        <PropertyRef Name="iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="tasksEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tareas" EntityType="Self.tarea" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__tareas__iduser__145C0A3F" Association="Self.FK__tareas__iduser__145C0A3F">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="tareas" EntitySet="tareas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
